@@ -1,14 +1,16 @@
+package com.example.feedapp.domain.framework.impl
+
+import FeedFramework
 import com.example.feedapp.constants.InteractionType
 import com.example.feedapp.data.model.FeedItem
-import com.example.feedapp.data.repository.FeedRepository
 import com.example.feedapp.domain.GetFeedItemsUseCase
-import com.example.feedapp.framework.FeedInteractionHandler
+import com.example.feedapp.domain.framework.FeedInteractionHandler
 import javax.inject.Inject
 
 class FeedFrameworkImpl @Inject constructor(
   private val getFeedItemsUseCase: GetFeedItemsUseCase,
   private val interactionHandler: FeedInteractionHandler
-) : FeedFramework  {
+) : FeedFramework {
   override suspend fun getFeedItems(): List<FeedItem> {
     return getFeedItemsUseCase()
   }

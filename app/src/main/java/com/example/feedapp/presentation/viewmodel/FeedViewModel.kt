@@ -10,8 +10,6 @@ import javax.inject.Inject
 
 @HiltViewModel
 class FeedViewModel @Inject constructor(private val feedFramework: FeedFramework) : ViewModel() {
-  // ... rest of your ViewModel code
-
 
   private val _feedItems = MutableStateFlow<List<FeedItem>>(emptyList())
   val feedItems: StateFlow<List<FeedItem>> = _feedItems
@@ -27,5 +25,4 @@ class FeedViewModel @Inject constructor(private val feedFramework: FeedFramework
     feedFramework.handleInteraction(feedItem, InteractionType.CLICK)
   }
 
-  // ... other interaction handling methods
 }

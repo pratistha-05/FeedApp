@@ -1,7 +1,8 @@
-package com.example.feedapp.framework
+package com.example.feedapp.domain.framework.impl
 
 import com.example.feedapp.constants.InteractionType
 import com.example.feedapp.data.model.FeedItem
+import com.example.feedapp.domain.framework.FeedInteractionHandler
 import com.example.feedapp.presentation.uiHandler.UiUpdater
 import javax.inject.Inject
 
